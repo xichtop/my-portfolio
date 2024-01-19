@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
   listProjects: ProjectItem[] = [
     {
       title: "Yolo Shop",
-      href: "https://main--fascinating-bubblegum-37362e.netlify.app/home",
+      href: "https://shopyolo.netlify.app",
       imgHref: "././assets/images/projects/yolo.jpg",
       gitHref: "https://github.com/xichtop/mobile-web-ui",
       description: "A website for saling technology merchandises.",
