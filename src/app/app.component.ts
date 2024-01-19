@@ -1,31 +1,128 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { ExperienceComponent } from './experience/experience.component';
+import { ProjectComponent } from './project/project.component';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { ExperienceItem } from '../models/experience';
+import { ProjectItem } from '../models/project';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
+    imports: [CommonModule, RouterOutlet, ExperienceComponent, ProjectComponent]
 })
 export class AppComponent implements OnInit {
 
+  @ViewChild('about') aboutElement: ElementRef = {} as ElementRef;
+  @ViewChild('experiences') experiencesElement: ElementRef = {} as ElementRef;
+  @ViewChild('projects') projectsElement: ElementRef = {} as ElementRef;
+  @ViewChild('edu') eduElement: ElementRef = {} as ElementRef;
+
   currentStyle = 'background: radial-gradient(600px at 158px 748px, rgba(29, 78, 216, 0.15), transparent 80%);';
+  currentText = "I am Le Xich Top 😊";
+  currentStatusText = true;
+  currentSection = 'about';
+  listExperiences: ExperienceItem[] = [
+    {
+      time: "2022 - Present",
+      position: "Frontend Developer",
+      company: "DXC Technology",
+      companyHref: "https://dxc.com/us/en",
+      description: "Developed and styled interactive web app portals in insurance sector such as Sale Intermediary, Customer Portal, Underwriting Portal, Lead Management, ...",
+      technology: ["Angular", "SCSS", "Typescipt", "API level 3"]
+    },
+    {
+      time: "Jan - Feb 2022",
+      position: "Frontend Developer Intern",
+      company: "DXC Technology",
+      companyHref: "https://dxc.com/us/en",
+      description: "Got acquainted with multiple systems, develop UI base on Marvellap and do the integration.",
+      technology: ["Angular", "SCSS", "Typescipt", "Javascript"]
+    }
+  ];
+  listProjects: ProjectItem[] = [
+    {
+      title: "Yolo Shop",
+      href: "https://main--fascinating-bubblegum-37362e.netlify.app/home",
+      imgHref: "././assets/images/projects/yolo.jpg",
+      gitHref: "https://github.com/xichtop/mobile-web-ui",
+      description: "A website for saling technology merchandises.",
+      technology: ["Angular", "SCSS", "NG-ZORRO", "ngx-translate"]
+    },
+    {
+      title: "Yolo Shop API",
+      href: "https://documenter.getpostman.com/view/13212963/2s9Xxzss9a",
+      imgHref: "././assets/images/projects/yolo-api.jpg",
+      gitHref: "https://github.com/xichtop/mobile-web-be",
+      description: "A resful API includes CRUD, Authorize, Limited, ...",
+      technology: ["Nodejs", "Expressjs", "Mongodb", "Restful API"]
+    },
+    {
+      title: "League Of Legends Clone",
+      href: "https://xtleagueoflegends.netlify.app/home",
+      imgHref: "././assets/images/projects/lol.jpg",
+      gitHref: "https://github.com/xichtop/leagueoflegends",
+      description: "A website to introduce League of Legends game.",
+      technology: ["Angular", "SCSS", "ngx-translate"]
+    },
+    {
+      title: "Yolo Shop React Version",
+      href: "https://github.com/xichtop/yoloshop",
+      imgHref: "././assets/images/projects/yolo-react.jpg",
+      gitHref: "https://github.com/xichtop/yoloshop",
+      description: "A website for saling technology merchandises.",
+      technology: ["React", "SCSS", "Redux", "Firebase"]
+    }
+  ]
+
+  @HostListener('document:scroll', ['$event'])
+  public onViewportScroll() {
+    const windowHeight = window.innerHeight;
+    const aboutRec = this.aboutElement.nativeElement.getBoundingClientRect();
+    const experiencesRec = this.experiencesElement.nativeElement.getBoundingClientRect();
+    const projectsRec = this.projectsElement.nativeElement.getBoundingClientRect();
+    const eduRec = this.eduElement.nativeElement.getBoundingClientRect();
+    if (aboutRec.top >= 0) {
+      this.currentSection = 'about';
+    } else if (experiencesRec.top >= 0) {
+      this.currentSection = 'experiences';
+    } else if (projectsRec.top >= 0) {
+      this.currentSection = 'projects';
+    } else if (eduRec.top >= 0) {
+      this.currentSection = 'edu';
+    } else {
+      this.currentSection = '';
+    }
+  }
 
   constructor(
-    private renderer: Renderer2
   ) {}
 
   ngOnInit(): void {
+    setInterval(() => {
+      if (this.currentStatusText) {
+        this.currentText = "I am a Software Engineer 👨‍💻";
+      } else {
+        this.currentText = "I am Le Xich Top 😊";
+      }
+      this.currentStatusText = !this.currentStatusText;
+    }, 4000);
   }
 
   onMoveMouse(event: MouseEvent) {
     this.currentStyle = `background: radial-gradient(600px at ${event.clientX}px ${event.clientY}px, rgba(29, 78, 216, 0.15), transparent 80%);`;
   }
 
-  clickTest() {
-    console.log('clicked');
+  scrollTo(section: string): void {
+    const element = document.getElementById(section);
+    element?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      if (this.currentSection !== section) {
+        this.currentSection = section;
+      }
+    }, 500);
   }
 
 }

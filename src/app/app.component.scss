@@ -1,3 +1,50 @@
-.test-bg {
-  background: radial-gradient(600px at 158px 748px, rgba(29, 78, 216, 0.15), transparent 80%);
+.line-1 {
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter {
+  animation: typewriter 4s steps(44) 0s 1 normal both,
+  blinkTextCursor 500ms steps(44) infinite normal;
+  animation-iteration-count: infinite;
+}
+
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 24em;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(245, 6, 6, 0.75);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.section-header.active {
+  a {
+    span {
+      color: rgb(226 232 240);
+    }
+
+    span:first-child {
+      background-color: rgb(226, 232, 240);
+      width: 4rem;
+    }
+  }
 }
