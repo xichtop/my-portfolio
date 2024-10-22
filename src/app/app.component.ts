@@ -26,20 +26,20 @@ export class AppComponent implements OnInit {
   currentSection = 'about';
   listExperiences: ExperienceItem[] = [
     {
-      time: "2022 - Present",
+      time: "May 2024 - Current",
+      position: "Frontend Developer",
+      company: "Blogic Systems",
+      companyHref: "https://www.blogicsystems.com/",
+      description: "Working with micro-frontend in Angular by using nx, developed ui base on angular material and daisy ui, ...",
+      technology: ["Angular", "TailwindCss", "Typescript", "Nx"]
+    },
+    {
+      time: "Jan 2022 - May 2024",
       position: "Frontend Developer",
       company: "DXC Technology",
       companyHref: "https://dxc.com/us/en",
       description: "Developed and styled interactive web app portals in insurance sector such as Sale Intermediary, Customer Portal, Underwriting Portal, Lead Management, ...",
-      technology: ["Angular", "SCSS", "Typescipt", "API level 3"]
-    },
-    {
-      time: "Jan - Feb 2022",
-      position: "Frontend Developer Intern",
-      company: "DXC Technology",
-      companyHref: "https://dxc.com/us/en",
-      description: "Got acquainted with multiple systems, develop UI base on Marvellap and do the integration.",
-      technology: ["Angular", "SCSS", "Typescipt", "Javascript"]
+      technology: ["Angular", "SCSS", "Typescript", "API level 3"]
     }
   ];
   listProjects: ProjectItem[] = [
