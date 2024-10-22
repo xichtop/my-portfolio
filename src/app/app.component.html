@@ -1,72 +1,71 @@
-<div class="bg-slate-900 leading-relaxed text-slate-400 
-  antialiased selection:bg-teal-300 selection:text-teal-900"
+<div class="antialiased leading-relaxed bg-slate-900 text-slate-400 selection:bg-teal-300 selection:text-teal-900"
   (mousemove)="onMoveMouse($event)"
 >
-  <div class="pointer-events-none fixed inset-0 z-30 transition duration-300" 
+  <div class="fixed inset-0 z-30 transition duration-300 pointer-events-none"
     [style]="currentStyle">
   </div>
-  <div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
+  <div class="max-w-screen-xl min-h-screen px-6 py-12 mx-auto font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
     <div class="lg:flex lg:justify-between lg:gap-4">
       <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+        <div>
           <a class="flex flex-row items-end" href="/">
-            <img src="../assets/images/header/logo-dark.png" alt="" class="w-16 mr-6 pb-1">
+            <img src="../assets/images/header/logo-dark.png" alt="" class="w-16 pb-1 mr-6">
             <h1 class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">Xich Top</h1>
           </a>
-        <div class="">
-          <h1 class="mt-6 text-lg font-medium tracking-tight text-slate-200 sm:text-xl pr-4">Hi there! 🖐</h1>
-          <h1 class="line-1 anim-typewriter mt-6 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">{{currentText}}</h1>
-          <p class="mt-2.5 max-w-xs leading-normal">I build pixel-perfect, accessible products for the web and beyond.</p>
+          <div class="mt-8">
+            <h1 class="pr-4 mt-6 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">Hi there! 🖐</h1>
+            <h1 class="mt-6 text-lg font-medium tracking-tight line-1 anim-typewriter text-slate-200 sm:text-xl">{{currentText}}</h1>
+            <p class="mt-2.5 max-w-xs leading-normal">I build pixel-perfect, accessible products for the web and beyond.</p>
+          </div>
         </div>
-        <nav class="nav hidden lg:block">
+        <nav class="hidden nav lg:block">
           <ul class="mt-6 w-max">
             <li (click)="scrollTo('about')" class="section-header" [class.active]="currentSection === 'about'">
-              <a class="group flex items-center py-3 cursor-pointer">
-                <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all 
-                  group-hover:w-16 group-hover:bg-slate-200 motion-reduce:transition-none"></span>
-                <span class="nav-text text-xs font-bold uppercase tracking-widest 
-                text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
+              <a class="flex items-center py-3 cursor-pointer group">
+                <span class="w-8 h-px mr-4 transition-all nav-indicator bg-slate-600 group-hover:w-16 group-hover:bg-slate-200 motion-reduce:transition-none"></span>
+                <span class="text-xs font-bold tracking-widest uppercase nav-text text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
                 About me</span>
               </a>
             </li>
             <li (click)="scrollTo('experiences')" class="section-header" [class.active]="currentSection === 'experiences'">
-              <a class="group flex items-center py-3 cursor-pointer">
-                <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 motion-reduce:transition-none"></span>
-                <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200">My Experiences</span>
+              <a class="flex items-center py-3 cursor-pointer group">
+                <span class="w-8 h-px mr-4 transition-all nav-indicator bg-slate-600 group-hover:w-16 group-hover:bg-slate-200 motion-reduce:transition-none"></span>
+                <span class="text-xs font-bold tracking-widest uppercase nav-text text-slate-500 group-hover:text-slate-200">My Experiences</span>
               </a>
             </li>
             <li (click)="scrollTo('projects')" class="section-header" [class.active]="currentSection === 'projects'">
-              <a class="group flex items-center py-3 cursor-pointer">
-                <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 motion-reduce:transition-none"></span>
-                <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200">My Projects</span>
+              <a class="flex items-center py-3 cursor-pointer group">
+                <span class="w-8 h-px mr-4 transition-all nav-indicator bg-slate-600 group-hover:w-16 group-hover:bg-slate-200 motion-reduce:transition-none"></span>
+                <span class="text-xs font-bold tracking-widest uppercase nav-text text-slate-500 group-hover:text-slate-200">My Projects</span>
               </a>
             </li>
             <li (click)="scrollTo('edu')" class="section-header" [class.active]="currentSection === 'edu'">
-              <a class="group flex items-center py-3 cursor-pointer">
-                <span class="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 motion-reduce:transition-none"></span>
-                <span class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200">Educations and Cetificates</span>
+              <a class="flex items-center py-3 cursor-pointer group">
+                <span class="w-8 h-px mr-4 transition-all nav-indicator bg-slate-600 group-hover:w-16 group-hover:bg-slate-200 motion-reduce:transition-none"></span>
+                <span class="text-xs font-bold tracking-widest uppercase nav-text text-slate-500 group-hover:text-slate-200">Educations and Cetificates</span>
               </a>
             </li>
           </ul>
         </nav>
-        <ul class="ml-1 mt-8 flex items-center">
+        <ul class="flex items-center mt-8 ml-1">
           <li class="mr-5 text-xs">
             <a class="block hover:text-slate-200" href="https://github.com/xichtop" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-6 w-6" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-6 h-6" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
             </a>
           </li>
           <li class="mr-5 text-xs">
             <a class="block hover:text-slate-200" href="https://twitter.com/xichtop" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 204" fill="currentColor" class="h-6 w-6" aria-hidden="true"><path id="white_background" d="M221.95,51.29c0.15,2.17,0.15,4.34,0.15,6.53c0,66.73-50.8,143.69-143.69,143.69v-0.04   C50.97,201.51,24.1,193.65,1,178.83c3.99,0.48,8,0.72,12.02,0.73c22.74,0.02,44.83-7.61,62.72-21.66   c-21.61-0.41-40.56-14.5-47.18-35.07c7.57,1.46,15.37,1.16,22.8-0.87C27.8,117.2,10.85,96.5,10.85,72.46c0-0.22,0-0.43,0-0.64   c7.02,3.91,14.88,6.08,22.92,6.32C11.58,63.31,4.74,33.79,18.14,10.71c25.64,31.55,63.47,50.73,104.08,52.76   c-4.07-17.54,1.49-35.92,14.61-48.25c20.34-19.12,52.33-18.14,71.45,2.19c11.31-2.23,22.15-6.38,32.07-12.26   c-3.77,11.69-11.66,21.62-22.2,27.93c10.01-1.18,19.79-3.86,29-7.95C240.37,35.29,231.83,44.14,221.95,51.29z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 204" fill="currentColor" class="w-6 h-6" aria-hidden="true"><path id="white_background" d="M221.95,51.29c0.15,2.17,0.15,4.34,0.15,6.53c0,66.73-50.8,143.69-143.69,143.69v-0.04   C50.97,201.51,24.1,193.65,1,178.83c3.99,0.48,8,0.72,12.02,0.73c22.74,0.02,44.83-7.61,62.72-21.66   c-21.61-0.41-40.56-14.5-47.18-35.07c7.57,1.46,15.37,1.16,22.8-0.87C27.8,117.2,10.85,96.5,10.85,72.46c0-0.22,0-0.43,0-0.64   c7.02,3.91,14.88,6.08,22.92,6.32C11.58,63.31,4.74,33.79,18.14,10.71c25.64,31.55,63.47,50.73,104.08,52.76   c-4.07-17.54,1.49-35.92,14.61-48.25c20.34-19.12,52.33-18.14,71.45,2.19c11.31-2.23,22.15-6.38,32.07-12.26   c-3.77,11.69-11.66,21.62-22.2,27.93c10.01-1.18,19.79-3.86,29-7.95C240.37,35.29,231.83,44.14,221.95,51.29z"></path></svg>
             </a>
           </li>
           <li class="mr-5 text-xs">
             <a class="block hover:text-slate-200" href="https://www.linkedin.com/in/xichtop/" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>
             </a>
           </li>
           <li class="mr-5 text-xs">
             <a class="block hover:text-slate-200" href="https://www.facebook.com/xichtop/" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 50 50">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 50 50">
                 <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z"></path>
             </svg>
             </a>
@@ -76,40 +75,43 @@
       <main class="pt-24 lg:w-1/2 lg:py-24" id="content">
         <section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" #about
         >
-          <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200 mb-12">About me</h2>
+          <h2 class="mb-12 text-sm font-bold tracking-widest uppercase text-slate-200">About me</h2>
           <div>
             <p class="mb-4">
               Back in 2022, after graduating from
-              <a class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
-                href="https://ptithcm.edu.vn/" target="_blank"
-              >
-                Post And Telecommunications Institute Of Technology</a>
-              as an <a class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" 
-                href="https://en.wikipedia.org/wiki/Information_technology"
-                target="_blank">
-              Information Technology</a>
-              engineer. I started my first job as a <a class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300">Frontend Developer</a>
-              at <a class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
-              href="https://dxc.com/us/en" target="_blank">DXC Technology</a>. Fast-forward to today, 
-              and I’ve had the privilege of working in multiple 
-              <a class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300">Microservices</a>, collaborating with colleagues from other country
-              such as <a class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300">India, China, Singapore, Egypt...</a>
-              and specially approaching with a big system in <a class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300">Insuarance</a> sector.
+              <a class="link" href="https://ptithcm.edu.vn/" target="_blank">Post And Telecommunications Institute Of Technology</a>
+              as an <a class="link" href="https://en.wikipedia.org/wiki/Information_technology" target="_blank">Information Technology</a>
+              engineer. I started my first job as a <a class="link">Frontend Developer</a>
+              at <a class="link" href="https://dxc.com/us/en" target="_blank">DXC Technology</a>.
+               In here, I’ve had the privilege of working in multiple projects, collaborating with colleagues from other country
+              such as <a class="link">India, China, Singapore, Egypt...</a>
+              and specially approaching with a big system in <a class="link">Insuarance</a> sector.
+            </p>
+            <p class="mb-4">
+              After gaining my experience in this field, i decided to seek new challenges for myself. I left DXC and continued my journey at
+              <a class="link" href="https://www.blogicsystems.com/" target="_blank">Blogic Systems.</a>
+              Fast-forward to today, i has studied a lot of new technology here. I worked with
+              <a class="link" href="https://nx.dev/" target="_blank">Nx</a>
+              for micro-frontend, using new ui library like
+              <a class="link" href="https://daisyui.com/" target="_blank">daisyUI</a>
+              and evenly worked with
+              <a class="link" href="https://www.docker.com/" target="_blank">Docker</a> and
+              <a class="link" href="https://jenkins.io/" target="_blank">Jenkins</a> for CI/CD.
             </p>
             <p class="mt-4">
-              In my free time, I often study new courses in my sector at 
-              <a class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" 
+              In my free time, I often study new courses in my sector at
+              <a class="link"
               href="https://www.udemy.com/" target="_blank">Udemy</a>,
-              <a class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" 
+              <a class="link"
                href="https://www.linkedin.com/feed/" target="_blank">Linkedin</a> or
-              <a class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" 
+              <a class="link"
                href="https://www.youtube.com/" target="_blank">Youtube</a> to develop my career.
-              I also learn <a class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300">English</a> and 
-              <a class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300">Chinese</a> 
+              I also learn <a class="link">English</a> and
+              <a class="link">Chinese</a>
               to support my colabration at work.
             </p>
             <p class="mt-4">
-              When I’m not at the computer, I’m usually hang out with my friends and family, play 
+              When I’m not at the computer, I’m usually hang out with my friends and family, play
               <span class="group inline-flex lg:cursor-[url('/assets/images/icon/ball.png'),_pointer] lg:font-medium lg:text-slate-200"><span class="sr-only">Soccer</span>
               <span class="group-hover:text-red-400 transition duration-75 group-hover:-translate-y-px delay-[50ms]" aria-hidden="true">S</span>
               <span class="group-hover:text-orange-400 transition duration-75 group-hover:-translate-y-px delay-[75ms]" aria-hidden="true">o</span>
@@ -125,7 +127,7 @@
         <section id="experiences" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
           #experiences
         >
-          <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200 mb-12">My Experiences</h2>
+          <h2 class="mb-12 text-sm font-bold tracking-widest uppercase text-slate-200">My Experiences</h2>
           <div>
             <ol class="group/list">
               @for (item of listExperiences; track $index) {
@@ -135,11 +137,11 @@
               }
             </ol>
             <div class="mt-12">
-              <a class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base" href="https://drive.google.com/file/d/1usnEi4y8HSZHg-QQsoKXzy2hRs7vL_i4/view" target="_blank">
+              <a class="inline-flex items-baseline text-base font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link" href="https://drive.google.com/file/d/1usnEi4y8HSZHg-QQsoKXzy2hRs7vL_i4/view" target="_blank">
                 <span>
                   View Full Résumé
                   <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block w-4 h-4 ml-1 transition-transform translate-y-px shrink-0 group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
                   </span>
                 </span>
               </a>
@@ -149,7 +151,7 @@
         <section id="projects" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
           #projects
         >
-          <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200 mb-12">My Projects</h2>
+          <h2 class="mb-12 text-sm font-bold tracking-widest uppercase text-slate-200">My Projects</h2>
           <div>
             <ol class="group/list">
               @for (item of listProjects; track $index) {
@@ -159,11 +161,11 @@
               }
             </ol>
             <div class="mt-12">
-              <a class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base" href="">
+              <a class="inline-flex items-baseline text-base font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link" href="">
                 <span>
                   View Full Project Archive
                   <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block w-4 h-4 ml-1 transition-transform translate-y-px shrink-0 group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
                   </span>
                 </span>
               </a>
@@ -173,60 +175,60 @@
         <section id="edu" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
           #edu
         >
-          <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200 mb-12">My Educations and Cetificates</h2>
+          <h2 class="mb-12 text-sm font-bold tracking-widest uppercase text-slate-200">My Educations and Cetificates</h2>
           <div>
             <ol class="group/list">
               <li class="mb-12">
                 <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 cursor-pointer">
                   <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                  <header class="z-10 mb-2 mt-1 text-sm font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2">2017 - 2022</header>
+                  <header class="z-10 mt-1 mb-2 text-sm font-semibold tracking-wide uppercase text-slate-500 sm:col-span-2">2017 - 2022</header>
                   <div class="z-10 sm:col-span-6">
                     <h3 class="font-medium leading-snug text-slate-200">
-                      <a class="inline-flex items-baseline font-medium leading-tight text-slate-200 group-hover:text-teal-300 text-base">
+                      <a class="inline-flex items-baseline text-base font-medium leading-tight text-slate-200 group-hover:text-teal-300">
                         <span>Post And Telecommunications Institute Of Technology</span>
                         <span class="inline-block pl-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block w-4 h-4 ml-1 transition-transform translate-y-px shrink-0 group-hover:-translate-y-1 group-hover:translate-x-1 motion-reduce:transition-none" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
                         </span>
                       </a>
                     </h3>
                     <p class="mt-2 text-sm leading-normal">Major: Infomation Technology</p>
                   </div>
-                </div>                
+                </div>
               </li>
               <li class="mb-12">
                 <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 cursor-pointer">
                   <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                  <header class="z-10 mb-2 mt-1 text-sm font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2">2023</header>
+                  <header class="z-10 mt-1 mb-2 text-sm font-semibold tracking-wide uppercase text-slate-500 sm:col-span-2">2023</header>
                   <div class="z-10 sm:col-span-6">
                     <h3 class="font-medium leading-snug text-slate-200">
-                      <a class="inline-flex items-baseline font-medium leading-tight text-slate-200 group-hover:text-teal-300 text-base">
+                      <a class="inline-flex items-baseline text-base font-medium leading-tight text-slate-200 group-hover:text-teal-300">
                         <span>Toeic Certificate</span>
                         <span class="inline-block pl-1">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block w-4 h-4 ml-1 transition-transform translate-y-px shrink-0 group-hover:-translate-y-1 group-hover:translate-x-1 motion-reduce:transition-none" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
                         </span>
                       </a>
                     </h3>
                     <p class="mt-2 text-sm leading-normal">Listening and Reading: 805</p>
                   </div>
-                </div>                
+                </div>
               </li>
             </ol>
           </div>
         </section>
         <footer class="max-w-md pb-16 text-sm text-slate-500 sm:pb-0">
-          <p>Built with 
+          <p>Built with
             <a class="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
-              href="https://angular.dev/" target="_blank"  
+              href="https://angular.dev/" target="_blank"
             >Angular
             </a>
-            and 
+            and
             <a class="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
-              href="https://tailwindcss.com/" target="_blank"  
+              href="https://tailwindcss.com/" target="_blank"
             >Taiwind CSS
             </a>
-            , deployed with 
+            , deployed with
             <a class="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
-              href="https://www.netlify.com/" target="_blank"  
+              href="https://www.netlify.com/" target="_blank"
             >Netlify
             </a>
             .
