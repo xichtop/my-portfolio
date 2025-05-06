@@ -38,17 +38,25 @@ export class AppComponent implements OnInit {
       position: "Frontend Developer",
       company: "DXC Technology",
       companyHref: "https://dxc.com/us/en",
-      description: "Developed and styled interactive web app portals in insurance sector such as Sale Intermediary, Customer Portal, Underwriting Portal, Lead Management, ...",
+      description: "Developed and styled interactive web app portals in insurance sector such as selling Intermediary, Customer Portal, Underwriting Portal, Lead Management, ...",
       technology: ["Angular", "SCSS", "Typescript", "API level 3"]
     }
   ];
   listProjects: ProjectItem[] = [
     {
+      title: "MUA BALO Website",
+      href: "https://muabalo.com/",
+      imgHref: "././assets/images/projects/mua-balo.png",
+      gitHref: "",
+      description: "A website for selling bags.",
+      technology: ["NextJS", "TailwindCSS", "DaisyUI"]
+    },
+    {
       title: "Yolo Shop",
       href: "https://shopyolo.netlify.app",
       imgHref: "././assets/images/projects/yolo.jpg",
       gitHref: "https://github.com/xichtop/mobile-web-ui",
-      description: "A website for saling technology merchandises.",
+      description: "A website for selling technology merchandises.",
       technology: ["Angular", "SCSS", "NG-ZORRO", "ngx-translate"]
     },
     {
@@ -67,14 +75,14 @@ export class AppComponent implements OnInit {
       description: "A website to introduce League of Legends game.",
       technology: ["Angular", "SCSS", "ngx-translate"]
     },
-    {
-      title: "Yolo Shop React Version",
-      href: "https://github.com/xichtop/yoloshop",
-      imgHref: "././assets/images/projects/yolo-react.jpg",
-      gitHref: "https://github.com/xichtop/yoloshop",
-      description: "A website for saling technology merchandises.",
-      technology: ["React", "SCSS", "Redux", "Firebase"]
-    }
+    // {
+    //   title: "Yolo Shop React Version",
+    //   href: "https://github.com/xichtop/yoloshop",
+    //   imgHref: "././assets/images/projects/yolo-react.jpg",
+    //   gitHref: "https://github.com/xichtop/yoloshop",
+    //   description: "A website for selling technology merchandises.",
+    //   technology: ["React", "SCSS", "Redux", "Firebase"]
+    // }
   ]
 
   @HostListener('document:scroll', ['$event'])
