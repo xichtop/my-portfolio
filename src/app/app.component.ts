@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
       company: "Blogic Systems",
       companyHref: "https://www.blogicsystems.com/",
       description: "Working with micro-frontend in Angular by using nx, developed ui base on angular material and daisy ui, ...",
-      technology: ["Angular", "TailwindCss", "Typescript", "Nx"]
+      technology: ["Angular", "Angular Material", "TailwindCss", "Typescript", "Nx", "Docker", "Jenkins", "Ubuntu", "MacOS"]
     },
     {
       time: "Jan 2022 - May 2024",
@@ -39,10 +39,34 @@ export class AppComponent implements OnInit {
       company: "DXC Technology",
       companyHref: "https://dxc.com/us/en",
       description: "Developed and styled interactive web app portals in insurance sector such as selling Intermediary, Customer Portal, Underwriting Portal, Lead Management, ...",
-      technology: ["Angular", "SCSS", "Typescript", "API level 3"]
+      technology: ["Angular", "Angular Material", "SCSS", "Typescript"]
     }
   ];
   listProjects: ProjectItem[] = [
+    {
+      title: "Sub Dealer Client",
+      href: "https://khotot.vn",
+      imgHref: "././assets/images/projects/sd-client.jpg",
+      gitHref: "",
+      description: "A client website to to sell cameras of DSS Sale Platform.",
+      technology: ["NextJS", "TailwindCSS", "HeroUI", "Redux", "NextAuth", "Docker", "Jenkins"]
+    },
+    {
+      title: "DSS Admin",
+      href: "https://dss.khotot.vn",
+      imgHref: "././assets/images/projects/dss-admin.jpg",
+      gitHref: "",
+      description: "A admin website to manage DSS Sale Platform.",
+      technology: ["Angular", "TailwindCSS", "NgZorro", "Docker", "Jenkins"]
+    },
+    {
+      title: "Master Dealer Admin",
+      href: "https://md.khotot.vn",
+      imgHref: "././assets/images/projects/md-admin.jpg",
+      gitHref: "",
+      description: "A admin website to manage Master Dealer of DSS Sale Platform.",
+      technology: ["Angular", "TailwindCSS", "NgZorro", "Docker", "Jenkins"]
+    },
     {
       title: "MUA BALO Website",
       href: "https://muabalo.com/",
@@ -60,29 +84,13 @@ export class AppComponent implements OnInit {
       technology: ["Angular", "SCSS", "NG-ZORRO", "ngx-translate"]
     },
     {
-      title: "Yolo Shop API",
-      href: "https://documenter.getpostman.com/view/13212963/2s9Xxzss9a",
-      imgHref: "././assets/images/projects/yolo-api.jpg",
-      gitHref: "https://github.com/xichtop/mobile-web-be",
-      description: "A resful API includes CRUD, Authorize, Limited, ...",
-      technology: ["Nodejs", "Expressjs", "Mongodb", "Restful API"]
-    },
-    {
       title: "League Of Legends Clone",
       href: "https://xtleagueoflegends.netlify.app/home",
       imgHref: "././assets/images/projects/lol.jpg",
       gitHref: "https://github.com/xichtop/leagueoflegends",
       description: "A website to introduce League of Legends game.",
       technology: ["Angular", "SCSS", "ngx-translate"]
-    },
-    // {
-    //   title: "Yolo Shop React Version",
-    //   href: "https://github.com/xichtop/yoloshop",
-    //   imgHref: "././assets/images/projects/yolo-react.jpg",
-    //   gitHref: "https://github.com/xichtop/yoloshop",
-    //   description: "A website for selling technology merchandises.",
-    //   technology: ["React", "SCSS", "Redux", "Firebase"]
-    // }
+    }
   ]
 
   @HostListener('document:scroll', ['$event'])
@@ -111,7 +119,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     setInterval(() => {
       if (this.currentStatusText) {
-        this.currentText = "I am a Software Engineer 👨‍💻";
+        this.currentText = "I am a Frontend Developer 👨‍💻";
       } else {
         this.currentText = "I am Le Xich Top 😊";
       }
