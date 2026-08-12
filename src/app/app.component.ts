@@ -26,11 +26,19 @@ export class AppComponent implements OnInit {
   currentSection = 'about';
   listExperiences: ExperienceItem[] = [
     {
-      time: "May 2024 - Current",
+      time: "March 2026 - Current",
+      position: "Senior Frontend Developer",
+      company: "FPT Software",
+      companyHref: "https://fptsoftware.com/",
+      description: "Developing enterprise web applications for the manufacturing domain, focusing on scalable and maintainable frontend solutions. Building modern user interfaces with Angular and PrimeNG, integrating APIs, and contributing to CI/CD workflows and cloud-based deployments.",
+      technology: ["Angular", "Angular Material", "TailwindCss", "Typescript", "PrimeNG", "AWS", "Github Actions"]
+    },
+    {
+      time: "May 2024 - March 2026",
       position: "Frontend Developer",
       company: "Blogic Systems",
       companyHref: "https://www.blogicsystems.com/",
-      description: "Working with micro-frontend in Angular by using nx, developed ui base on angular material and daisy ui, ...",
+      description: "Developed and maintained scalable web applications using a micro-frontend architecture with Angular and Nx. Built reusable UI components with Angular Material and DaisyUI, while contributing to containerized deployments and CI/CD pipelines across multiple development environments.",
       technology: ["Angular", "Angular Material", "TailwindCss", "Typescript", "Nx", "Docker", "Jenkins", "Ubuntu", "MacOS"]
     },
     {
@@ -38,7 +46,7 @@ export class AppComponent implements OnInit {
       position: "Frontend Developer",
       company: "DXC Technology",
       companyHref: "https://dxc.com/us/en",
-      description: "Developed and styled interactive web app portals in insurance sector such as selling Intermediary, Customer Portal, Underwriting Portal, Lead Management, ...",
+      description: "Developed enterprise web applications for the insurance domain, including Intermediary, Customer, and Underwriting Portals, as well as Lead Management systems. Focused on building responsive, reusable, and maintainable user interfaces while collaborating with cross-functional teams to deliver business-critical features.",
       technology: ["Angular", "Angular Material", "SCSS", "Typescript"]
     }
   ];
